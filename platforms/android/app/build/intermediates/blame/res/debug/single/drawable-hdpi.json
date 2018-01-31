@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\CodeBase\\weex\\imkzp-cuct\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_refresh.png",
+        "source": "D:\\CodeBase\\weex\\imkzp-cuct\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\ic_action_refresh.png"
+    },
+    {
+        "merged": "D:\\CodeBase\\weex\\imkzp-cuct\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_scan.png",
+        "source": "D:\\CodeBase\\weex\\imkzp-cuct\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\ic_action_scan.png"
+    }
+]

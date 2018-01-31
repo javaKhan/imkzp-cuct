@@ -1,0 +1,9 @@
+{
+   "AppName":"CUCT",
+   "Version":"0.1",
+   "BuildVersion":"0.1.0",
+   "AppId":"com.imkzp.cuct",
+   "CodeSign":"",
+   "Profile":"",
+   "WeexBundle":"index.js"
+}
