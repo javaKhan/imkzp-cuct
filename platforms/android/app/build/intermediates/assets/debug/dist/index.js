@@ -429,10 +429,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -541,10 +539,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -649,10 +645,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -695,10 +689,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -710,29 +702,7 @@ new Vue(module.exports)
 /* 13 */
 /***/ (function(module, exports) {
 
-module.exports = {
-  "wrapper": {
-    "justifyContent": "center",
-    "alignItems": "center"
-  },
-  "logo": {
-    "width": "424",
-    "height": "200"
-  },
-  "greeting": {
-    "marginTop": "70",
-    "fontSize": "50",
-    "color": "#41B883"
-  },
-  "message": {
-    "marginTop": "30",
-    "marginRight": "30",
-    "marginBottom": "30",
-    "marginLeft": "30",
-    "fontSize": "32",
-    "color": "#727272"
-  }
-}
+module.exports = {}
 
 /***/ }),
 /* 14 */
@@ -747,15 +717,64 @@ Object.defineProperty(exports, "__esModule", {
 
 var _weexUi = __webpack_require__(15);
 
-//    const modal = weex.requireModule('modal');
 exports.default = {
-    components: { WxcMinibar: _weexUi.WxcMinibar },
+    components: { WxcMinibar: _weexUi.WxcMinibar, WxcTabBar: _weexUi.WxcTabBar, WxcIcon: _weexUi.WxcIcon },
     data: function data() {
         return {
-            logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
+            tabIconFontTitles: [{
+                title: '通行证',
+                codePoint: '\uE604'
+            }, {
+                title: '用户中心',
+                codePoint: '\uE613'
+            }, {
+                title: '推荐系统',
+                codePoint: '\uE603'
+            }, {
+                title: '其它',
+                codePoint: '\uE608'
+            }],
+            tabIconFontStyles: {
+                bgColor: '#FFFFFF',
+                titleColor: '#666666',
+                activeTitleColor: '#3D3D3D',
+                activeBgColor: '#FFFFFF',
+                isActiveTitleBold: true,
+                width: 160,
+                height: 120,
+                fontSize: 24,
+                textPaddingLeft: 10,
+                textPaddingRight: 10,
+                iconFontSize: 50,
+                iconFontColor: '#333333',
+                activeIconFontColor: 'red',
+                iconFontUrl: '//at.alicdn.com/t/font_555238_o9p1c2w06tsdobt9.ttf'
+            }
         };
     }
 }; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1570,10 +1589,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -1777,10 +1794,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -2109,10 +2124,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -2386,10 +2399,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -2607,10 +2618,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -3205,10 +3214,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -3541,10 +3548,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -4449,10 +4454,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -4611,10 +4614,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -4994,10 +4995,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -5335,10 +5334,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -5636,10 +5633,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -6210,10 +6205,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -6402,10 +6395,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -6612,10 +6603,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -6917,10 +6906,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -7144,10 +7131,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -7305,10 +7290,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -7746,10 +7729,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -8040,10 +8021,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -8162,10 +8141,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -8471,10 +8448,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -8595,10 +8570,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -9085,10 +9058,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -9452,10 +9423,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -10327,10 +10296,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -10691,10 +10658,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -10871,10 +10836,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -11022,10 +10985,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -11299,10 +11260,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -11585,10 +11544,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -11726,10 +11683,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -12187,10 +12142,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -12596,10 +12549,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -13007,10 +12958,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -13351,10 +13300,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -13961,10 +13908,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -14306,10 +14251,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -14915,10 +14858,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -15415,10 +15356,8 @@ __vue_styles__.forEach(function (module) {
     __vue_options__.style[name] = module[name]
   }
 })
-if (typeof weex === "object" && weex && weex.document) {
-  try {
-    weex.document.registerStyleSheets(__vue_options__._scopeId, __vue_styles__)
-  } catch (e) {}
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 }
 
 module.exports = __vue_exports__
@@ -15694,21 +15633,21 @@ module.exports.render._withStripped = true
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('wxc-minibar', {
+  return _c('div', [_c('wxc-tab-bar', {
     attrs: {
-      "backgroundColor": "#3eb4ff"
+      "tabTitles": _vm.tabIconFontTitles,
+      "tabStyles": _vm.tabIconFontStyles,
+      "titleType": "iconFont"
     }
-  }, [_c('image', {
-    staticStyle: {
-      height: "32px",
-      width: "88px"
-    },
+  }, [_c('div', {
+    staticClass: ["item-container"],
+    style: _vm.contentStyle
+  }, [_c('wxc-minibar', {
     attrs: {
-      "slot": "left",
-      "src": "https://img.alicdn.com/tfs/TB1QN8pdlHH8KJjy0FbXXcqlpXa-220-80.png"
-    },
-    slot: "left"
-  }), _c('text', {
+      "backgroundColor": "#3eb4ff",
+      "leftButton": ""
+    }
+  }, [_c('text', {
     staticStyle: {
       fontSize: "40px"
     },
@@ -15716,26 +15655,55 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "slot": "middle"
     },
     slot: "middle"
-  }, [_vm._v("CCTV.COM-UC")]), _c('image', {
-    staticStyle: {
-      height: "32px",
-      width: "40px"
-    },
+  }, [_vm._v("通行证")])]), _c('text', [_vm._v("通行证")])], 1), _c('div', {
+    staticClass: ["item-container"],
+    style: _vm.contentStyle
+  }, [_c('wxc-minibar', {
     attrs: {
-      "slot": "right",
-      "src": "https://img.alicdn.com/tfs/TB1j39Uc0fJ8KJjy0FeXXXKEXXa-160-128.png"
-    },
-    slot: "right"
-  })]), _c('div', {
-    staticClass: ["wrapper"]
-  }, [_c('image', {
-    staticClass: ["logo"],
-    attrs: {
-      "src": _vm.logo
+      "backgroundColor": "#3eb4ff",
+      "leftButton": ""
     }
-  }), _c('text', {
-    staticClass: ["greeting"]
-  }, [_vm._v("CCTV.com")])])], 1)
+  }, [_c('text', {
+    staticStyle: {
+      fontSize: "40px"
+    },
+    attrs: {
+      "slot": "middle"
+    },
+    slot: "middle"
+  }, [_vm._v("用户中心")])]), _c('text', [_vm._v("用户中心")])], 1), _c('div', {
+    staticClass: ["item-container"],
+    style: _vm.contentStyle
+  }, [_c('wxc-minibar', {
+    attrs: {
+      "backgroundColor": "#3eb4ff",
+      "leftButton": ""
+    }
+  }, [_c('text', {
+    staticStyle: {
+      fontSize: "40px"
+    },
+    attrs: {
+      "slot": "middle"
+    },
+    slot: "middle"
+  }, [_vm._v("推荐系统")])]), _c('text', [_vm._v("推荐系统")])], 1), _c('div', {
+    staticClass: ["item-container"],
+    style: _vm.contentStyle
+  }, [_c('wxc-minibar', {
+    attrs: {
+      "backgroundColor": "#3eb4ff",
+      "leftButton": ""
+    }
+  }, [_c('text', {
+    staticStyle: {
+      fontSize: "40px"
+    },
+    attrs: {
+      "slot": "middle"
+    },
+    slot: "middle"
+  }, [_vm._v("设置中心")])]), _c('text', [_vm._v("我的主页")])], 1)])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

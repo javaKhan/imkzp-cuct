@@ -1,56 +1,101 @@
 <template>
+    <div>
 
-<div>
+        <wxc-tab-bar :tab-titles="tabIconFontTitles" :tab-styles="tabIconFontStyles" title-type="iconFont">
+            <!-- 第一个页面内容-->
+            <div class="item-container" :style="contentStyle">
+                <wxc-minibar background-color="#3eb4ff" leftButton="">
+                    <text style="font-size: 40px;" slot="middle">通行证</text>
+                </wxc-minibar>
 
-        <wxc-minibar background-color="#3eb4ff">
-            <image src="https://img.alicdn.com/tfs/TB1QN8pdlHH8KJjy0FbXXcqlpXa-220-80.png"
-                   slot="left"
-                   style="height: 32px;width: 88px;"></image>
-            <text style="font-size: 40px;" slot="middle">CCTV.COM-UC</text>
-            <image slot="right"
-                   src="https://img.alicdn.com/tfs/TB1j39Uc0fJ8KJjy0FeXXXKEXXa-160-128.png"
-                   style="height: 32px;width: 40px"></image>
-        </wxc-minibar>
-    <div class="wrapper">
-        <image :src="logo" class="logo"></image>
-        <text class="greeting">CCTV.com</text>
+
+                <passport></passport>
+            </div>
+
+            <!-- 第二个页面内容-->
+            <div class="item-container" :style="contentStyle">
+                <wxc-minibar background-color="#3eb4ff" leftButton="">
+                    <text style="font-size: 40px;" slot="middle">用户中心</text>
+                </wxc-minibar>
+
+                <usercenter></usercenter>
+            </div>
+
+            <!-- 第三个页面内容-->
+            <div class="item-container" :style="contentStyle">
+                <wxc-minibar background-color="#3eb4ff" leftButton="">
+                    <text style="font-size: 40px;" slot="middle">推荐系统</text>
+                </wxc-minibar>
+                <recommend></recommend>
+            </div>
+
+            <!-- 第四个页面内容-->
+            <div class="item-container" :style="contentStyle">
+                <wxc-minibar background-color="#3eb4ff" leftButton="">
+                    <text style="font-size: 40px;" slot="middle">设置中心</text>
+                </wxc-minibar>
+                <setting></setting>
+            </div>
+        </wxc-tab-bar>
     </div>
-</div>
 </template>
 
 <script>
-    import {WxcMinibar} from  'weex-ui';
-//    const modal = weex.requireModule('modal');
+    import {WxcMinibar, WxcTabBar} from  'weex-ui';
+    import Passport from './views/passport';
+    import Usercenter from "./views/usercenter";
+    import Recommend from "./views/recommend";
+    import Setting from "./views/setting";
+
     export default {
-        components: { WxcMinibar },
+        components: {
+            Setting,
+            Recommend,
+            Usercenter,
+            Passport,
+            WxcMinibar, WxcTabBar
+        },
         data () {
             return {
-                logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png',
+                tabIconFontTitles: [
+                    {
+                        title: '通行证',
+                        codePoint: '\ue604',
+                    }, {
+                        title: '用户中心',
+                        codePoint: '\ue613',
+                    }, {
+                        title: '推荐系统',
+                        codePoint: '\ue603',
+                    }, {
+                        title: '其它设置',
+                        codePoint: '\ue608'
+                    }],
+                tabIconFontStyles: {
+                    bgColor: '#FFFFFF',
+                    titleColor: '#666666',
+                    activeTitleColor: '#3D3D3D',
+                    activeBgColor: '#FFFFFF',
+                    isActiveTitleBold: true,
+                    width: 160,
+                    height: 120,
+                    fontSize: 24,
+                    textPaddingLeft: 10,
+                    textPaddingRight: 10,
+                    iconFontSize: 50,
+                    iconFontColor: '#333333',
+                    activeIconFontColor: 'red',
+                    iconFontUrl: '//at.alicdn.com/t/font_555238_o9p1c2w06tsdobt9.ttf'
+                }
+            }
+        },
+        methods: {
+            contentStyle(){
+
             }
         }
     }
 </script>
 
 <style scoped>
-    .wrapper {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .logo {
-        width: 424px;
-        height: 200px;
-    }
-
-    .greeting {
-        margin-top: 70px;
-        font-size: 50px;
-        color: #41B883;
-    }
-
-    .message {
-        margin: 30px;
-        font-size: 32px;
-        color: #727272;
-    }
 </style>
